@@ -1,0 +1,11 @@
+srcfolder  .
+destfolder data
+trialname  tideheat
+
+file   vpl.in
+
+file   star.in
+dMass [0.075,0.3,0.005] m
+
+file   planet.in
+dSemi  [0.001,0.1,0.001] a
