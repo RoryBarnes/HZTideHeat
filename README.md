@@ -2,14 +2,14 @@ HZTideHeat
 ==========
 
 Surface energy flux on a terrestrial exoplanet in the habitable zone (HZ) due to tidal dissipation according the the eqtide-CPL
-model from [vplanet](https://github.com/VirtualPlanetaryLaboratory/vplanet>).
+model from [vplanet](https://github.com/VirtualPlanetaryLaboratory/vplanet).
 
 
 - **Date**              12/15/18
 - **Author**            Rory Barnes
 - **Modules**           eqtide
 - **Approx. runtime**   3 minutes
-- **Source code**       [vplanet](https://github.com/VirtualPlanetaryLaboratory/vplanet>)
+- **Source code**       [vplanet](https://github.com/VirtualPlanetaryLaboratory/vplanet)
 
 
 This example calculates the surface energy flux on a 1 Earth-mass, 1 Earth-radius terrestrial exoplanet that is tidally locked and 
