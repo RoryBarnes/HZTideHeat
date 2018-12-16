@@ -190,15 +190,15 @@ for im in range(mbin):
 
 plt.figure(figsize=(6.5,9))
 
-plt.xlabel('Semi-Major Axis (AU)',fontsize=20)
-plt.ylabel('Stellar Mass (M$_\odot$)',fontsize=20)
+plt.xlabel('Semi-Major Axis [AU]',fontsize=20)
+plt.ylabel('Stellar Mass [M$_\odot$]',fontsize=20)
 plt.tick_params(axis='both', labelsize=20)
 
 fbk = {'lw':0.0, 'edgecolor':None}
 
 plt.fill_betweenx(mcol,rv,em,facecolor='0.85', **fbk)
 plt.fill_betweenx(mcol,mg,maxg,facecolor='0.75', **fbk)
-
+plt.title('Tidal Heat Flux [W/m$^2$]')
 
 #plt.xscale('log')
 #plt.yscale('log')
