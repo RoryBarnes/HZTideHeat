@@ -114,6 +114,7 @@ iSemi=0
 
 for dir in dirs:
     if dir != "0":  # WTF?
+        print(dir)
         cmd = "cd "+dir+"; vplanet vpl.in >& output"
         subp.call(cmd, shell=True)
         # At this point the log file has been generated
@@ -140,7 +141,6 @@ for dir in dirs:
                     semi[iSemi] = float(words[4])/1.49597870700e11
                 if (words[0] == "(SurfEnFluxEqtide)") and (foundpl == 1):
                     heat[iStar][iSemi] = float(words[10])
-        print(dir,semi[iSemi],star[iStar],iStar,heat[iStar][iSemi])
         iSemi += 1
         if (iSemi == nsemi):
         # New line in semi
@@ -148,10 +148,6 @@ for dir in dirs:
             iSemi = 0
 
 # Arrays ecc,obl,heat now contain the data to make the figure
-
-print(star)
-print(semi)
-
 
 msmin=0.07      # Minimum stellar mass in solar units
 msmax=0.301     # Maximum stellar mass in solar units
@@ -187,7 +183,6 @@ for im in range(mbin):
     maxg[im] = lim[3]
     em[im] = lim[4]
 
-
 plt.figure(figsize=(6.5,9))
 
 plt.xlabel('Semi-Major Axis [AU]',fontsize=20)
@@ -209,12 +204,9 @@ ContSet = plt.contour(semi,star,heat,5,colors='black',linestyles='solid',
                       levels=[0.01,0.1,1,10,100],linewidths=3)
 plt.clabel(ContSet,fmt="%.2f",inline=True,fontsize=18)
 
-# Io's heat flux is 1.5-3 W/m^2. After some fussing, this choice of contour matches that range.
-#plt.contour(ecc,obl,heat,5,colors=vpl.colors.orange,linestyles='solid',
-
 plt.tight_layout()
 
 if (sys.argv[1] == 'pdf'):
-    plt.savefig('HZHeat.pdf')
+    plt.savefig('HZTideHeat.pdf')
 if (sys.argv[1] == 'png'):
-    plt.savefig('HZHeat.png')
+    plt.savefig('HZTideHeat.png')
