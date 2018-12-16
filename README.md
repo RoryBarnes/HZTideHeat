@@ -12,8 +12,8 @@ model from [vplanet](https://github.com/VirtualPlanetaryLaboratory/vplanet>).
 - **Source code**       [vplanet](https://github.com/VirtualPlanetaryLaboratory/vplanet>)
 
 
-This example calculates the surface energy flux on a terrestrial exoplanet that is tidally locked and 
-has an eccentricity of 0.05. It requires `vplanet` and it supporting software packages `vspace` (part of `vplanet`)
+This example calculates the surface energy flux on a 1 Earth-mass, 1 Earth-radius terrestrial exoplanet that is tidally locked and 
+has a tidal Q of 12 and an eccentricity of 0.05. It requires `vplanet` and it supporting software packages `vspace` (part of `vplanet`)
 and [vplot](https://github.com/VirtualPlanetaryLaboratory/vplot). 
 
 
