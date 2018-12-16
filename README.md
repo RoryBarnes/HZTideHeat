@@ -1,26 +1,22 @@
-IoHeat
+HZTideHeat
 ==========
 
 Overview
 --------
 
-Surface energy flux on Io due to tidal dissipation according the the eqtide-CPL
-model.
+Surface energy flux on a terrestrial exoplanet in the habitable zone (HZ) due to tidal dissipation according the the eqtide-CPL
+model from `vplanet <https://github.com/VirtualPlanetaryLaboratory/vplanet>`_.
 
 ===================   ============
-**Date**              07/25/18
+**Date**              12/15/18
 **Author**            Rory Barnes
 **Modules**           eqtide
-**Approx. runtime**   1 minute
-**Source code**       `GitHub <https://github.com/VirtualPlanetaryLaboratory/vplanet-private/tree/master/examples/IoHeat>`_
+**Approx. runtime**   3 minutes
+**Source code**       `vplanet <https://github.com/VirtualPlanetaryLaboratory/vplanet>`_
 ===================   ============
 
-This example reproduces the surface energy flux on Io over a range of eccentricity
-and obliquity. It also shows how to use vspace, a script in this repository that
-can generate input files across a parameter range. vspace will create a large
-number of directories, each of which has 3 input files. In this example, the makeplot
-script will run each individual trial, gather the results, and create the summary
-plot below. The yellow strip corresponds to the observed heat flow of Io :cite::Veeder04.
+This example calculates the surface energy flux on a terrestrial exoplanet that is tidally locked and 
+has an eccentricity of 0.05. It requires `vplanet` and it supporting software package `vspace`. 
 
 
 To run this example
@@ -35,12 +31,9 @@ To run this example
 Expected output
 ---------------
 
-.. figure:: IoHeat.png
+.. figure:: HZTideHeat.png
    :width: 600px
    :align: center
 
-Contour plot of surface tidal heat flux of Io as a function of its eccentricity
-and obliquity. Contour units are W/m^2, the vertical line corresponds to Io's
-observed eccentricity, and the horizontal line is the expected obliquity if Io
-is in a Cassini state :cite:`BillsRay00`. The orange shaded region corresponds
-to the observed value of 1.5-3 W/m^2 :cite:`Veeder12`.
+Contour plot of surface tidal heat flux of a terrestrial a 1 Earth-mass, 1 Earth-radius 
+exoplanet with a tidal Q of 12 and and eccentricity of 0.05. Contour units are W/m^2.
