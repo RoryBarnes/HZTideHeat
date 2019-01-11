@@ -200,8 +200,8 @@ plt.title('Tidal Heat Flux [W/m$^2$]')
 plt.xlim(0.01,0.1)
 plt.ylim(0.075,0.3)
 
-ContSet = plt.contour(semi,star,heat,5,colors='black',linestyles='solid',
-                      levels=[0.01,0.1,1,10,100],linewidths=3)
+ContSet = plt.contour(semi,star,heat,6,colors='black',linestyles='solid',
+                      levels=[0.01,0.1,1,10,100,1000],linewidths=3)
 plt.clabel(ContSet,fmt="%.2f",inline=True,fontsize=18)
 
 plt.tight_layout()
